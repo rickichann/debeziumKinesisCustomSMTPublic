@@ -1,10 +1,11 @@
 # Custom Single Message Transform (SMT) for Debezium
 
-This project demonstrates how to create a custom SMT (Single Message Transform) for [Debezium](https://debezium.io/) using Maven.
+This project demonstrates how to create a custom SMT (Single Message Transform) for [Debezium]([https://debezium.io/](https://debezium.io/documentation/reference/stable/operations/debezium-server.html) using Maven.
+
 
 ## Overview
 
-The custom SMT implemented here selects the `id` field if available; otherwise, it falls back to using the `_id` field as the partition key. This is useful when working with sinks like Amazon Kinesis that require custom partition key logic.
+The custom SMT implemented here selects the `id` field if available; otherwise, it falls back to using the `_id` field as the partition key (or you can add another column). This is useful when working with sinks like Amazon Kinesis that require custom partition key logic.
 
 ## Project Structure
 
