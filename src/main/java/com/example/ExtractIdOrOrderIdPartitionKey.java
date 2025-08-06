@@ -24,8 +24,8 @@ public class ExtractIdOrOrderIdPartitionKey<R extends ConnectRecord<R>> implemen
         } else if (schema.field("_id") != null) {
             id = valueStruct.get("_id");
         } 
-        //  else if (schema.field("other_column....") != null) {
-        //     id = valueStruct.get("other_column....");
+        //  else if (schema.field("another_column....") != null) {
+        //     id = valueStruct.get("another_column....");
         // }
 
         if (id == null) {
