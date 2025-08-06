@@ -1,6 +1,6 @@
 # Custom Single Message Transform (SMT) for Debezium
 
-This project demonstrates how to create a custom SMT (Single Message Transform) for [Debezium]([https://debezium.io/](https://debezium.io/documentation/reference/stable/operations/debezium-server.html) using Maven.
+This project demonstrates how to create a custom SMT (Single Message Transform) for [Debezium](https://debezium.io/](https://debezium.io/documentation/reference/stable/operations/debezium-server.html) using Maven.
 
 
 ## Overview
