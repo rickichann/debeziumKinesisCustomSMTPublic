@@ -1,5 +1,10 @@
 # Custom Single Message Transform (SMT) for Debezium
 
+Background:
+One important aspect to consider when implementing data streaming with Debezium and Kinesis Data Streams is that the partition_key must not exceed the 256-character limit. Previously, I used Debezium's built-in function (debezium.transforms.ExtractNewRecordState.field=id), which only allows specifying a single column as the partition_key. However, in practice, not all database tables use an id column as the primary key — each table may have a different unique structure. To address this limitation and provide more flexibility in determining the key, I developed a custom SMT (Single Message Transform) that enables dynamic column selection based on priority.
+
+
+
 This project demonstrates how to create a custom SMT (Single Message Transform) for [Debezium](https://debezium.io/documentation/reference/stable/operations/debezium-server.html) using Maven.
 
 
