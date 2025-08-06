@@ -21,9 +21,12 @@ public class ExtractIdOrOrderIdPartitionKey<R extends ConnectRecord<R>> implemen
         Object id = null;
         if (schema.field("id") != null) {
             id = valueStruct.get("id");
-        } else if (schema.field("order_id") != null) {
-            id = valueStruct.get("order_id");
-        }
+        } else if (schema.field("_id") != null) {
+            id = valueStruct.get("_id");
+        } 
+        //  else if (schema.field("other_column....") != null) {
+        //     id = valueStruct.get("other_column....");
+        // }
 
         if (id == null) {
             return record;  // fallback gagal, biarkan lewat
